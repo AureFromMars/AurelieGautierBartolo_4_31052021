@@ -1,0 +1,164 @@
+main {
+    @include flexbox(flex, nowrap, column);
+}
+
+.picture {
+    @include flexbox(flex);
+    width: 100%;
+    height: 300px;
+    margin-bottom: -65px;
+    margin-top: 50px;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        flex: 1 0;
+    }
+}
+
+.menu {
+    @include flexbox(flex, nowrap, column);
+    z-index: 2;
+    background-color: $LIGHT_GREY;
+    border-radius: 50px 50px 0 0;
+    padding-top: 30px;
+    position: relative;
+
+    section {
+        margin-left: 20px;
+    }
+
+    &__title {
+        @include flexbox(flex, nowrap, row, space-between);
+        font-family: $HEADINGS !important;
+        font-size: 1.1em;
+        margin: 0 30px 12px 0;
+        max-width: 400px;
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        margin: 18px 0 -5px 0;
+        font-size: 1em;
+    }
+
+    &-underline {
+        width: 40px;
+        border: 2px solid $COLOR_TERTIARY;
+        margin: 10px 10px 15px 0;
+    }
+
+    &-cards {
+        @include flexbox (flex, wrap, row, center);
+        width: 100%;
+        margin-left: -14px;
+
+
+        
+        &__item {
+            @include flexbox (flex, nowrap, row, space-between);
+            box-shadow: 2px 5px 12px 0px $HIGH_GREY;
+            height: 67px;
+            flex: 0 1 100%;
+            max-width: 450px;
+            min-width: 273px;
+            border: none;
+            border-radius: 15px;
+            background-color: white;
+            margin: 0 0 15px 10px;
+            cursor: pointer;
+            overflow: hidden;
+            align-items: center;
+            animation: translateY 0.2s ease-out forwards, opacity 0.5s ease-in both;
+            transform-origin: top;
+
+            @for $i from 0 through 3
+			{
+				&:nth-child(#{$i + 1})
+				{
+					animation-delay: (#{$i/2})+s;
+				}
+			}
+
+            &__content {
+                @include flexbox (flex, nowrap, row, space-between);
+                width: 100%;
+                padding: 10px 18px 13px 10px;
+                align-items: end;
+                overflow: hidden;
+
+                &__text {
+                    @include flexbox (flex, nowrap, column);
+                    width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    * {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    h3 {
+                        font-size: 1.14em;
+                    }
+
+                    p {
+                        font-size: 0.92em;
+                        letter-spacing: 0.2px;
+                        margin-top: 3px;
+                    }
+                }
+
+                &__price {
+                    font-weight: bold;
+                    font-size: 0.92em;
+                }
+            }
+
+            &--check {
+                @include flexbox (flex, nowrap, null, center);
+                flex: 0 0 0;
+                height: 100%;
+                background: $COLOR_TERTIARY;
+                overflow: hidden;
+                transition: all 0.2s linear;
+                color: white;
+                font-size: x-large;
+                align-items: center;
+                text-align: center;
+            }
+
+            &:hover &--check {
+                flex-basis: 55px;
+            }
+        }        
+    }
+
+    .form-menu {
+        margin-top: 35px;
+
+        .button{
+            padding: 0 50px;
+        }
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes translateY {
+    0% {
+        transform: translateY(50%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}

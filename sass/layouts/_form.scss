@@ -1,0 +1,45 @@
+.form {
+    @include flexbox(flex, wrap, column, space-between);
+    background-color: $LIGHT_GREY;
+    align-items: center;
+    text-align : center;
+    width: 100%;
+    position: static;
+    margin-top: 65px;
+    padding-bottom: 57px;
+
+    &-search {
+        background-color: $MEDIUM_GREY;
+        width: 100%;
+        padding: 15px 0;
+
+        > * {
+            color: $DARK_GREY;
+        }
+
+        > input {
+            border: none;
+            background: none;
+            margin-left: 10px;
+
+            &::placeholder {
+                opacity: 1;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &-text {
+
+        h1 {
+            line-height: 27px;
+            margin: 40px 50px 13px 50px;
+        }
+
+        p {
+            line-height: 22px;
+            margin-bottom: 30px;
+        }
+    }
+}

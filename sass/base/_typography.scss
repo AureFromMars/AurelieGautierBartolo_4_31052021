@@ -1,0 +1,55 @@
+$HEADINGS: 'Shrikhand';
+$TEXTS: 'Roboto', sans-serif;
+
+body {
+    font-family: $TEXTS;
+    
+    & a:link, a:visited     {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    & a:hover, &:focus {
+        color: $COLOR_PRIMARY;
+    }
+
+    & a:active {
+        color: $COLOR_SECONDARY;
+    }
+}
+
+p, h1, h2, h3, h4, ul {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1.17em;// viser le REM
+    font-weight: lighter;
+}
+
+h1 {
+    font-size: 1.57em;
+}
+
+h2 {
+    // letter-spacing: -0.5px;
+}
+
+h1, h2, h3, p {
+    letter-spacing: -0.5px;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    color:white;
+
+    &-title {
+    font-family: $HEADINGS !important;
+    font-size: 1.1em;
+    }
+}
+
