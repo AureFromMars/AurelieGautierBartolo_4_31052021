@@ -53,7 +53,7 @@ $(function()
 		 	   		},
 			   		error: function() // Fail
 			   		{
-						if($('#form-alert').length == 0)
+						if($('fail-msg').length == 0)
 						{
 							$form.append("<div id='form-alert'><div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><strong>"+$form.attr('fail-msg')+"</strong></div></div>");
 						}	
