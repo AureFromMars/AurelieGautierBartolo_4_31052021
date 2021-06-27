@@ -72,9 +72,10 @@
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-6">
-				<form id="form_1" novalidate success-msg="Votre message a été envoyé." fail-msg="Désolé mais il semblerait que votre serveur mail ne réponde pas. Veuillez nous excuser pour ce désagrément !">
-				<!-- <form id="form_1" novalidate> -->
-						<div class="form-group">
+				<!-- <form id="form_1" method="post" action="form_1.php" novalidate success-msg="Votre message a été envoyé." fail-msg="Désolé mais il semblerait que votre serveur mail ne réponde pas. Veuillez nous excuser pour ce désagrément !"> -->
+				<!-- <?php include('includes/form_1.php'); ?> -->
+				<form id="form_1" method="post" action="includes/form_1.php">
+					<div class="form-group">
 						<label for="name">
 							Nom
 						</label>
