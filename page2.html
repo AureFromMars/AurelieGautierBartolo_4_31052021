@@ -77,27 +77,27 @@
 				<form id="form_1" method="post" action="includes/form_1.php">
 					<div class="form-group">
 						<label for="name">
-							Nom
+							Nom<abbr title="Ce champ est obligatoire">*</abbr>
 						</label>
-						<input id="name" class="form-control" type="text" required />
+						<input id="name" title="Veuillez renseigner votre nom de famille." placeholder="Veuillez renseigner votre nom de famille." class="form-control" type="text" required />
 					</div>
 					<div class="form-group">
 						<label for="email">
-							Adresse email
+							Adresse email<abbr title="Ce champ est obligatoire">*</abbr>
 						</label>
-						<input id="email" class="form-control" type="email" required />
+						<input id="email" title="Veuillez renseigner une adresse email valide." placeholder="Veuillez renseigner une adresse email valide." class="form-control" type="email" required />
 					</div>
 					<div class="form-group">
 						<label for="input_504">
-							Comment nous avez-vous connu ?
+							Comment nous avez-vous connu ?<abbr title="Ce champ est obligatoire">*</abbr>
 						</label>
-						<input id="input_504" class="form-control" type="text" required  />
+						<input id="input_504" title="Merci de préciser comment vous avez connu La chouette agence." placeholder="Merci de préciser comment vous avez connu La chouette agence." class="form-control" type="text" required  />
 					</div>
 					<div class="form-group">
 						<label for="message">
 							Brief de votre projet (Ajoutez autant de détails que nécessaire)<br>
 						</label>
-						<textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
+						<textarea id="message" title="Précisez, si possible, le projet pour lequel vous contactez La chouette agence, ou tout autre sujet de votre demande de contact." placeholder="Précisez, si possible, le projet pour lequel vous contactez La chouette agence, ou tout autre sujet de votre demande de contact." class="form-control" rows="4" cols="50" required></textarea>
 					</div> 
 					<button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit">
 						Envoyer
@@ -157,12 +157,15 @@
 
 </div>
 <!-- Principal conteneur END -->
-    
+
 <script src="./js/jquery-2.1.0.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/blocs.min.js"></script>
 <script src="./js/jqBootstrapValidation.min.js"></script>
 <script src="./js/formHandler.min.js"></script>
+<!-- AJOUT -->
+<script src="./js/gmaps.min.js"></script>
+<script src="./js/jquery.touchSwipe.min.js"></script>
 
 </body>
 </html>
